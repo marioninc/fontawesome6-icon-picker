@@ -137,7 +137,7 @@ class Fa6IconPicker {
             i.classList.add(zFlag ? 'fa-brands' : 'fa-solid',iconName.split(', .')[0]);
             const btn = document.createElement('button');
             btn.classList.add('btn','btn-outline-secondary','mb-1','me-1');
-            btn.setAttribute('data-fapc-icon-name',iconName);
+            btn.setAttribute('data-fapc-icon-name',iconName.split(', .')[0]);
             btn.setAttribute('data-fapc-icon-type',zFlag ? 'fa-brands' : 'fa-solid');
             btn.style.width = "3em";
             btn.style.height = "3em";
