@@ -1,14 +1,3 @@
-function init(){
-    iconPicker = new Fa6IconPicker({
-        title: 'アイコンを選択',
-        disableIcons : ['fa-2'],
-        targetInput : document.querySelector('input[name=icon_input]'),
-        showBtnElement: document.getElementById('select_btn'),
-        targetViewIcon: document.getElementById('view_icon'),
-    });
-    // iconPicker.create();
-}
-
 class Fa6IconPicker {
     title = null; // title popoverに渡されるタイトル
     targetInput = null; // 結果を返すinput要素
@@ -22,6 +11,7 @@ class Fa6IconPicker {
     popoverOptions = { // popoverのオプション bootstrapに依存
         placement: 'bottom',
     };
+    maxWidth = '320px'; // popoverの最大幅
     isDispose = true; // 破壊されているかどうか
     extProps = {}; // 任意に追加された変数
 
@@ -67,6 +57,7 @@ class Fa6IconPicker {
             html: true,
             trigger: 'manual',
         },...this.popoverOptions});
+        this.popover.getTipElement().style.maxWidth = this.maxWidth; 
         this.toggleHandler = this.toggle.bind(this);
         if(this.isTargetInputClickEvent){
             this.targetInput.addEventListener('click', this.toggleHandler);
@@ -136,7 +127,7 @@ class Fa6IconPicker {
             let i = document.createElement("i");
             i.classList.add(zFlag ? 'fa-brands' : 'fa-solid',iconName.split(', .')[0]);
             const btn = document.createElement('button');
-            btn.classList.add('btn','btn-outline-secondary','mb-1','me-1');
+            btn.classList.add('btn','btn-outline-secondary','mb-1','me-1','mr-1');
             btn.setAttribute('data-fapc-icon-name',iconName);
             btn.setAttribute('data-fapc-icon-type',zFlag ? 'fa-brands' : 'fa-solid');
             btn.style.width = "3em";
@@ -193,4 +184,3 @@ class Fa6IconPicker {
         this.isDispose = true;
     }
 }
-document.addEventListener('DOMContentLoaded', init);
