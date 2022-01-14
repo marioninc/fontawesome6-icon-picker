@@ -1,7 +1,9 @@
 # fontawesome6-icon-picker
 Font Awesome6に対応したアイコンピッカー
 ![image](https://user-images.githubusercontent.com/52589133/149440263-d4b53ff5-52cc-48d9-87d0-f55468a63ec0.png)
-# LISENCE
+# LICENSE
+MIT License
+
 # Demo
 https://marioninc.github.io/fontawesome6-icon-picker/demo.html
 
