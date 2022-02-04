@@ -3,7 +3,7 @@ class Fa6IconPicker {
     targetInput = null; // 結果を返すinput要素
     targetViewIcon = null; // アイコンのプレビューを渡す要素
     popoverElement = null; // popoverする要素
-    targetCssName = "all.css"; // 解析するCSS名
+    targetCssName = "all.min.css"; // 解析するCSS名
     enableIcons = []; // ホワイトリスト
     disableIcons = []; // ブラックリスト
     isTargetInputClickEvent = true; // 結果を返すinputにイベントを与えるかどうか
